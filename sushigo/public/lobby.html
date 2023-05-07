@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lobby</title>
+  </head>
+  <body>
+    <div id="lobby-form-container">
+      <h1>Create or join a lobby</h1>
+      <form id="create-lobby-form">
+        <label for="lobby-name">Lobby name:</label>
+        <input type="text" id="lobby-name" name="lobby-name">
+        <button type="submit">Create lobby</button>
+      </form>
+      <br>
+      <form id="join-lobby-form">
+        <label for="lobby-code">Enter lobby code:</label>
+        <input type="text" id="lobby-code" name="lobby-code">
+        <button type="submit">Join lobby</button>
+      </form>
+    </div>
+
+    <div id="waiting-screen-container" style="display: none;">
+      <h1>Waiting for players...</h1>
+      <p>Lobby name: <span id="waiting-screen-lobby-name"></span></p>
+      <p>Lobby code: <span id="waiting-screen-lobby-code"></span></p>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/lobby.js"></script>
+  </body>
+</html>
